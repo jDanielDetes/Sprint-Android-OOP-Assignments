@@ -12,9 +12,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HttpGetActivity : AppCompatActivity() {
+class HttpGetActivity : HttpActivity() {
 
-    lateinit var jsonPlaceHolderApi: JsonPlaceHolderApi
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +38,7 @@ class HttpGetActivity : AppCompatActivity() {
         jsonPlaceHolderApi.getEmployees().enqueue(object : Callback<List<Employee>>{
 
             override fun onFailure(call: Call<List<Employee>>, throwable: Throwable) {
-                progressBar.visibility = View.GONE
-                result.text = throwable.toString()
+               this@HttpGetActivity.onFailure(throwable)
             }
 
             override fun onResponse(call: Call<List<Employee>>, response: Response<List<Employee>>) {
@@ -70,8 +69,7 @@ class HttpGetActivity : AppCompatActivity() {
         jsonPlaceHolderApi.getEmployees(employeeId).enqueue(object : Callback<List<Employee>>{
 
             override fun onFailure(call: Call<List<Employee>>, throwable: Throwable) {
-                progressBar.visibility = View.GONE
-                result.text = throwable.toString()
+                this@HttpGetActivity.onFailure(throwable)
             }
 
             override fun onResponse(call: Call<List<Employee>>, response: Response<List<Employee>>) {
@@ -102,8 +100,7 @@ class HttpGetActivity : AppCompatActivity() {
         jsonPlaceHolderApi.getEmployeesForAge(age).enqueue(object : Callback<List<Employee>>{
 
             override fun onFailure(call: Call<List<Employee>>, throwable: Throwable) {
-                progressBar.visibility = View.GONE
-                result.text = throwable.toString()
+                this@HttpGetActivity.onFailure(throwable)
             }
 
             override fun onResponse(call: Call<List<Employee>>, response: Response<List<Employee>>) {
@@ -114,9 +111,9 @@ class HttpGetActivity : AppCompatActivity() {
                     val employees = response.body()
                     val content = SpannableStringBuilder()
                     // TODO 9: Return the signature here instead of the name, id, etc.
-                    employees?.forEach { employee ->
+                    employeesFakeData?.forEach { employee ->
                         content
-                            .bold { append("Name: ") }
+                            .bold {employee.signature }
                             .append(employee.name).append("\n")
                             .bold { append("Id: ") }
                             .append(employee.id.toString()).append("\n")

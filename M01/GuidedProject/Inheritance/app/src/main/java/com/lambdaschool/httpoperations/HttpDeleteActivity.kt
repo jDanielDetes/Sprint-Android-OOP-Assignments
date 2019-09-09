@@ -11,9 +11,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HttpDeleteActivity : AppCompatActivity() {
+class HttpDeleteActivity :HttpActivity() {
 
-    lateinit var jsonPlaceHolderApi: JsonPlaceHolderApi
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
