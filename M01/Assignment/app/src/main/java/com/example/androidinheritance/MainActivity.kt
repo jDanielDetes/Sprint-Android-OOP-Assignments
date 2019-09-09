@@ -3,6 +3,8 @@ package com.example.androidinheritance
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         generateTestValues()
+
+        recycler_view.apply {
+            layoutManager= LinearLayoutManager(this@MainActivity)
+            setHasFixedSize(true)
+            adapter = ShoppingAdapter(shoppingList)
+        }
     }
 
         val testValues: ArrayList<ShoppingItem> = arrayListOf(
