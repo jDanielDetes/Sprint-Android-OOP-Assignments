@@ -27,9 +27,10 @@ class MainActivity : AppCompatActivity() {
             ShoppingItem.fruitItem(Color.RED,"Apple",true),
             ShoppingItem.fruitItem(Color.YELLOW,"Banana",true),
             ShoppingItem.winterClothes(Color.GREEN,"Hoodie","Medium"),
-            ShoppingItem.winterClothes(Color.LTGRAY,"Jacket","Large"),
+            ShoppingItem.winterClothes(Color.DKGRAY,"Jacket","Large"),
             ShoppingItem.newCar(Color.BLUE,"Car","Tesla"),
-            ShoppingItem.newCar(Color.WHITE,"Car","Toyota")
+            ShoppingItem.newCar(Color.WHITE,"Car","Toyota"),
+            ShoppingItem.fruitItem(Color.CYAN,"Orange",false)
 
         )
     fun generateTestValues() {
