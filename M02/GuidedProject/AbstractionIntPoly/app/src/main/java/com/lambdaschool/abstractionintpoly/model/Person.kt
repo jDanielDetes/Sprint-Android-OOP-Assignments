@@ -1,5 +1,7 @@
 package com.lambdaschool.abstractionintpoly.model
 
+import com.google.gson.annotations.SerializedName
+
 /*
 {
     name: "Chewbacca",
@@ -13,4 +15,22 @@ package com.lambdaschool.abstractionintpoly.model
  */
 
 // TODO 2: S05M02-2 Add class which inherits from parent class
+
+data class Person (
+    val height:String,
+    val mass: String,
+    val hair_color: String,
+    @SerializedName("skin_color") val skinColor : String,
+    @SerializedName("eye_color") val eyeColor:String
+
+
+) : SwApiObject() {
+    override fun info (): String = "EYES: $eyeColor\n URL= $url"
+
+    override fun toString(): String {
+        return "$name is $height cm tall, they have $skinColor skin"
+    }
+
+
+}
 

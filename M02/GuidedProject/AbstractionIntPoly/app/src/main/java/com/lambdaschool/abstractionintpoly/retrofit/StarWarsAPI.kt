@@ -9,6 +9,9 @@ import java.util.concurrent.TimeUnit
 // TODO 5: S05M02-5 Add the networking calls
 interface StarWarsAPI {
 
+    fun getPerson()
+    fun getStarship()
+
     class Factory {
 
         companion object {
