@@ -1,27 +1,29 @@
 package com.example.interfaces.model
 
-class Vehicle (id: String,weight:Int,favorite:Boolean)
+abstract class Vehicle (open val id: String,
+                        open val weight:Int ,
+                        open val favorite:Boolean)
 
-fun fly():String {
+fun travel():String {
     return ""
 }
 
 
 interface AirTravel {
     fun fly():String{
-        return ""
+        return "flying"
     }
 }
 
 interface WaterTravel{
     fun sail():String{
-        return""
+        return "Sailing"
     }
 
 }
-interface GroundTravel {
-    fun drive():String{
-        return ""
+open interface GroundTravel {
+    open fun drive():String{
+        return "Driving"
 
     }
 

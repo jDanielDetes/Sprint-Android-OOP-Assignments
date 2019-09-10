@@ -26,7 +26,7 @@ data class Person (
     override fun info (): String = "EYES: $eyeColor\n URL= $url"
 
     override fun toString(): String {
-        return "$name is $height cm tall, they have $skinColor skin"
+        return "$name is $height cm tall, they have $S"
     }
 
 
