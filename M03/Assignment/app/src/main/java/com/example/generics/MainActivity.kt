@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             test7.add(k)
             return test7
         }
+
+
+        class Phone <CellularService>(var objects: Phone)
+
+
+
     }
 
 
