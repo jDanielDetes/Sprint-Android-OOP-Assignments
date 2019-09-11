@@ -28,6 +28,14 @@ class MainActivity : AppCompatActivity() {
         val test6 = Task2<String>()
             test6.put(" test String")
             test6.put(4)
+
+
+
+        fun <K> Task3 (k: K): List<K>{
+            val test7 = ArrayList<K>()
+            test7.add(k)
+            return test7
+        }
     }
 
 
