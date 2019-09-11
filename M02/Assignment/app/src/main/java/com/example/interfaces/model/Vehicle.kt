@@ -2,7 +2,7 @@ package com.example.interfaces.model
 
 import java.io.Serializable
 
-abstract class Vehicle (open val id: String,
+open class Vehicle (open val id: String,
                         open val weight:Int ,
                         open val favorite:Boolean): Serializable {
 
@@ -13,7 +13,7 @@ override fun toString(): String {
 
 
 fun travel():String {
-    return ""
+    return "ways to travel"
 }
 
 

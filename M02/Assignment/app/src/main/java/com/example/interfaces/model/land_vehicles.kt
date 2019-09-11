@@ -18,7 +18,8 @@ class land_vehicles {
     data class car (
         val model : String = "Toyota",
         val color:String = "Blue",
-        val groundTravel: GroundTravel
+        val groundTravel : String = " Driving",
+        val isfavorite : Boolean
 
 
     ) : Vehicle("Car", 2871,true) {
@@ -32,7 +33,7 @@ class land_vehicles {
     data class train (
         val model : String ="Rail-Star",
         val color:String,
-        val groundTravel: GroundTravel
+        val groundTravel : String = " Driving"
 
 
     ) : Vehicle("train", 18000,false) {

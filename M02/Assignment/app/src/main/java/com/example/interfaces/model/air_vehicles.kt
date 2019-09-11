@@ -5,7 +5,7 @@ class air_vehicles {
     data class Helicopter (
         val model : String = "Sikorsky",
         val color:String = "Gray",
-        val airTravel: AirTravel
+        val airTravel : String = "Flying"
 
 
     ) : Vehicle("Helicopter", 2871,true) {
@@ -19,10 +19,11 @@ class air_vehicles {
     data class Jet (
         val model : String ="Embraer Phenom",
         val color:String,
-        val airTravel: AirTravel
+        val airTravel : String = "flying",
+        val isFavorite : Boolean
 
 
-    ) : Vehicle("train", 18000,false) {
+    ) : Vehicle("Jet", 18000,false) {
 
         override fun toString(): String {
             return "My uncle used to love $airTravel a $id he used to be in the military and was very experienced " +

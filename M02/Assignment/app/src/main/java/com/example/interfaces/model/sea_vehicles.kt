@@ -5,7 +5,7 @@ class sea_vehicles {
     data class Boat  (
         val model : String = "Sea Ray",
         val color:String = "red",
-        val waterTravel: WaterTravel
+        val waterTravel: String = "Sailing"
 
 
     ) : Vehicle("Boat", 2871,true) {
@@ -19,7 +19,8 @@ class sea_vehicles {
     data class Yacht (
         val model : String ="Ocean Pearl",
         val color:String,
-        val waterTravel: WaterTravel
+        val waterTravel: String = "Sailing",
+        val isFavorite: Boolean
 
 
     ) : Vehicle("Yacht", 18000,false) {
