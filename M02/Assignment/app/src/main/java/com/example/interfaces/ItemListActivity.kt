@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 
 import com.example.interfaces.dummy.DummyContent
+import com.example.interfaces.model.Vehicle
 import kotlinx.android.synthetic.main.activity_item_list.*
 import kotlinx.android.synthetic.main.item_list_content.view.*
 import kotlinx.android.synthetic.main.item_list.*
@@ -31,10 +32,12 @@ class ItemListActivity : AppCompatActivity() {
      */
     private var twoPane: Boolean = false
 
+    var Vehicle= mutableListOf<Vehicle>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_list)
-
+        Vehicle = mutableListOf()
         setSupportActionBar(toolbar)
         toolbar.title = title
 
@@ -96,12 +99,12 @@ class ItemListActivity : AppCompatActivity() {
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val item = values[position]
-            holder.idView.text = item.id
-            holder.contentView.text = item.content
+            val Vehicle = values[position]
+            holder.idView.text = Vehicle.id
+            holder.contentView.text = Vehicle.content
 
             with(holder.itemView) {
-                tag = item
+                tag = Vehicle
                 setOnClickListener(onClickListener)
             }
         }
