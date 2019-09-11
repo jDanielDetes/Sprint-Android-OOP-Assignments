@@ -38,7 +38,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        class Phone <CellularService>(var objects: Phone)
+        class Phone <CellularService>(var objects: CellularService)
+        open class CellularService
+        class Verizon: CellularService()
+        class TMobile : CellularService()
 
 
 
