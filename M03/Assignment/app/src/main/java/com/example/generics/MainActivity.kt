@@ -9,4 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+    val test = mutableListOf<String>(
+        "gfgg","super test", 4,"five"
+    )
+
+
 }
