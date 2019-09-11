@@ -1,8 +1,16 @@
 package com.example.interfaces.model
 
+import java.io.Serializable
+
 abstract class Vehicle (open val id: String,
                         open val weight:Int ,
-                        open val favorite:Boolean)
+                        open val favorite:Boolean): Serializable {
+
+override fun toString(): String {
+    return "Vehicle(name=$id, weight=$weight, id=$id, favorite =$favorite"
+} }
+
+
 
 fun travel():String {
     return ""
@@ -26,5 +34,7 @@ open interface GroundTravel {
         return "Driving"
 
     }
+
+
 
 }

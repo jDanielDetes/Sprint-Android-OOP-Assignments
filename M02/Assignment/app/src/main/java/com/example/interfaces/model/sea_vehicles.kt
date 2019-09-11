@@ -5,28 +5,28 @@ class sea_vehicles {
     data class Boat  (
         val model : String = "Sea Ray",
         val color:String = "red",
-        val groundTravel: GroundTravel
+        val waterTravel: WaterTravel
 
 
-    ) : Vehicle("Car", 2871,true) {
+    ) : Vehicle("Boat", 2871,true) {
 
         override fun toString(): String {
-            return "my favorite way of traveling is $groundTravel my $id it's color is $color  "
+            return "my favorite way of traveling by sea is $waterTravel in my $id it's color is $color  "
 
         }
     }
 
-    data class Submarine (
-        val model : String ="",
+    data class Yacht (
+        val model : String ="Ocean Pearl",
         val color:String,
-        val groundTravel: GroundTravel
+        val waterTravel: WaterTravel
 
 
-    ) : Vehicle("train", 18000,false) {
+    ) : Vehicle("Yacht", 18000,false) {
 
         override fun toString(): String {
-            return "When its a nice day my favorite way to travel is by $id it's always the " +
-                    "same $id Conductor i see $groundTravel the brand new $model  "
+            return "When i visit my dad in the bahamas he likes to take out his  $id it's huge and the best way to" +
+                    "$waterTravel he just got the new model $model "
 
         }
     }
