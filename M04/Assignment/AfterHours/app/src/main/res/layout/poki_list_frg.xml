@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fragments"
+    android:id="@+id/pokeListFrg">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        style="@style/recyclerView"
+        android:id="@+id/recyclerViewList">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        style="@style/button"
+        android:id="@+id/button"/>
+    <LinearLayout
+        android:id="@+id/checkboxLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/chBxHP"
+            android:text="@string/ChBxHP"/>
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/chBxAttack"
+            android:text="@string/ChBxAttack"/>
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/chBxDefense"
+            android:text="@string/ChBxDefense"/>
+    </LinearLayout>
+
+    <include
+        layout="@layout/content_layout"
+        style="@style/contentLayout">
+    </include>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/progressBar"/>
+
+</RelativeLayout>
